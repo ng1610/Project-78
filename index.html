@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>My Family Website</title>
+        <link rel="stylesheet" href= "style.css">
+    </head>
+
+    <body>
+        <center>
+      <h2>MY FAMILY BOOK</h2>
+
+      <img id="picture" src="">
+      <h4 id="names"></h4>
+      <button onclick="next_slide()">Next</button> 
+    </center>
+
+        <script>
+            var i=0;
+            var family_pics=["family_photo.jpg","dad_photo.jpg", "mom_photo.jpg","Me_photo.jpg"];
+            console.log(family_pics);
+            document.getElementById("picture").src=family_pics[i];
+
+            var family_names=["Full family","Varun Gupta (Dad)","Nita Mital (Mom)","Navya Gupta (Me)"];
+            console.log(family_names);
+            document.getElementById("names").innerHTML=family_names[i];
+
+            function next_slide(){
+             i++;
+             document.getElementById("names").innerHTML=family_names[i];
+             document.getElementById("picture").src=family_pics[i];
+             if (i>2) {
+                 i=-1;
+             };
+            };
+        </script>
+    </body>
+</html>
